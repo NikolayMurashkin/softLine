@@ -1,0 +1,39 @@
+.header {
+	z-index: 500;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	max-width: inherit;
+	width: 100%;
+	padding: 30px 70px;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background: #ffffff;
+	svg {
+		flex: 1 0 auto;
+	}
+	.nav {
+		flex: 0 1 auto;
+		.links {
+			display: flex;
+			list-style: none;
+			column-gap: 20px;
+			align-items: center;
+			&__item {
+				a {
+					text-decoration: none;
+					font-size: 18px;
+					line-height: 20px;
+					color: #444444;
+					cursor: pointer;
+					transition: color 0.3s ease;
+					&:hover {
+						color: #a30c33;
+					}
+				}
+			}
+		}
+	}
+}
