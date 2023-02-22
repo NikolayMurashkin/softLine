@@ -1,0 +1,20 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 4px;
+
+	.number {
+		font-size: 80px;
+		line-height: 80%;
+		color: #a30c33;
+		opacity: 0.95;
+	}
+
+	.label {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+		color: #444444;
+		white-space: pre-wrap;
+	}
+}
