@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-export const DmsIcon = (props) => (
+export const DmsIcon = ({ className }) => (
 	<svg
 		width={110}
 		height={110}
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
-		{...props}
+		className={className}
 	>
-		<circle opacity={0.05} cx={55} cy={55} r={55} fill='#000' />
+		<circle cx={55} cy={55} r={55} fill='#F2F2F2' />
 		<g opacity={0.9} stroke='#B01736' strokeWidth={2}>
 			<path d='M35.034 45.313a4 4 0 0 1 3.97-3.513h32.998a4 4 0 0 1 3.984 3.634l2.612 28.394a4 4 0 0 1-3.983 4.367H35.521a4 4 0 0 1-3.97-4.487l3.483-28.395Z' />
 			<path
@@ -19,4 +19,3 @@ export const DmsIcon = (props) => (
 		</g>
 	</svg>
 );
-

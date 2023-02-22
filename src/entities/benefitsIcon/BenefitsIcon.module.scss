@@ -3,11 +3,14 @@
 	flex-direction: column;
 	row-gap: 10px;
 	align-items: center;
+	justify-content: center;
+	flex: 0 1 178px;
 	&__label {
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 110%;
 		text-align: center;
 		color: #444444;
+		white-space: pre-wrap;
 	}
 }

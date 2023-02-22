@@ -1,0 +1,67 @@
+.benefits {
+	margin-bottom: 80px;
+	&__icon {
+		circle {
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover g {
+			stroke: #f2f2f2;
+		}
+		&:hover g path {
+			stroke: #f2f2f2;
+		}
+		&:hover circle {
+			fill: #b01736;
+		}
+		&:hover rect {
+			stroke: #f2f2f2;
+		}
+		&:hover path {
+			stroke: #f2f2f2;
+		}
+	}
+	&__top {
+		display: flex;
+		flex-direction: column;
+		row-gap: 50px;
+		justify-content: center;
+		margin-bottom: 70px;
+	}
+	&__title {
+		font-size: 56px;
+		line-height: 100%;
+		text-align: center;
+		color: #444444;
+	}
+	&__icons {
+		display: flex;
+		justify-content: center;
+		column-gap: 17px;
+		align-items: flex-start;
+		&_bottom {
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	hr {
+		margin: 0 30px;
+		margin-bottom: 70px;
+		opacity: 0.2;
+		// background: red;
+	}
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		row-gap: 50px;
+	}
+	&__subtitle {
+		font-size: 40px;
+		line-height: 120%;
+		text-align: center;
+		color: #444444;
+		white-space: pre-wrap;
+		strong {
+			color: #b01736;
+		}
+	}
+}
