@@ -1,0 +1,40 @@
+.mission {
+	position: relative;
+	background: #a30c33;
+	height: 471px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 100px 0;
+	&__patterns {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		opacity: 0.5;
+		width: 100%;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		row-gap: 40px;
+		align-items: center;
+		color: #ffffff;
+		z-index: 20;
+	}
+	&__title {
+		font-size: 56px;
+		line-height: 100%;
+		text-align: center;
+	}
+	&__text {
+		text-align: center;
+		white-space: pre-wrap;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 150%;
+	}
+}

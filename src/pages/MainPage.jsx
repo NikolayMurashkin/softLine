@@ -3,6 +3,7 @@ import { Banner } from '../features/banner/Banner';
 import { About } from '../entities/about/About';
 import { Numbers } from '../entities/numbers/Numbers';
 import { Mission } from '../entities/mission/Mission';
+import { Business } from '../features/business/Business';
 
 export const MainPage = () => {
 	return (
@@ -12,6 +13,7 @@ export const MainPage = () => {
 			<About />
 			<Numbers />
 			<Mission />
+			<Business />
 		</>
 	);
 };

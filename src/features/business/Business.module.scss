@@ -1,0 +1,20 @@
+.business {
+	margin-bottom: 100px;
+	&__title {
+		font-size: 56px;
+		line-height: 100%;
+		text-align: center;
+		color: #444444;
+		margin-bottom: 55px;
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+}
+
+.content {
+}
