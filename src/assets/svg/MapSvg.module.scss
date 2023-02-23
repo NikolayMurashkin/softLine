@@ -1,0 +1,9 @@
+.active {
+	transition: opacity 0.3s ease;
+	opacity: 0.8;
+	stroke: red;
+	stroke-width: 1px;
+	// &:hover {
+	// 	opacity: 1;
+	// }
+}

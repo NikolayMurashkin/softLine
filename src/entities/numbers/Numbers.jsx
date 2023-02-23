@@ -10,7 +10,7 @@ export const Numbers = () => {
 		<section className={cx('numbers')}>
 			<NumbersItem
 				className={cx('numbers__item')}
-				number={'> 30 лет'}
+				number={'>30 лет'}
 				label={'на IT-рынке'}
 			/>
 			<NumbersItem
