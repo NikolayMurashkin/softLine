@@ -1,10 +1,11 @@
 import { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
 import classNames from 'classnames/bind';
 
-import styles from './Slider.modules.scss';
+import { SliderArrowPrev } from '../../assets/icons/SliderArrowPrev.jsx';
+import { SliderArrowNext } from '../../assets/icons/SliderArrowNext.jsx';
+import styles from './Slider.module.scss';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -20,8 +21,14 @@ export const Slider = () => {
 			<div className={cx('slider__header')}>
 				<h2 className={cx('slider__title')}>Корпоративная жизнь</h2>
 				<div className={cx('slider__controls')}>
-					<span ref={navigationPrevRef}>prev</span>
-					<span ref={navigationNextRef}>next</span>
+					<SliderArrowPrev
+						className={cx('slider__arrow')}
+						navigationPrevRef={navigationPrevRef}
+					/>
+					<SliderArrowNext
+						className={cx('slider__arrow')}
+						navigationPrevRef={navigationNextRef}
+					/>
 				</div>
 			</div>
 			<div className={cx('slider__swiper')}>
@@ -41,8 +48,16 @@ export const Slider = () => {
 						swiper.params.navigation.nextEl =
 							navigationNextRef.current;
 					}}
-					pagination={{ clickable: true }}
-					scrollbar={{ draggable: true }}
+					pagination={{
+						el: `.${cx('slider__pagination')}`,
+						clickable: true,
+						renderBullet: function (index, className) {
+							return (
+								'<span class="' + className + '">' + '</span>'
+							);
+						},
+					}}
+					loop={true}
 					onSwiper={(swiper) => console.log(swiper)}
 					onSlideChange={() => console.log('slide change')}
 				>
@@ -62,6 +77,9 @@ export const Slider = () => {
 						<img src='images/slider/5.jpg' alt='' />
 					</SwiperSlide>
 				</Swiper>
+			</div>
+			<div className={cx('slider__pagination')}>
+				{/* <span className={cx('pagination__item')}></span> */}
 			</div>
 		</div>
 	);

@@ -45,3 +45,49 @@ body {
 	font-family: 'Proxima Nova semibold';
 	font-weight: 600;
 }
+
+#app {
+	height: 100%;
+}
+
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	background: #FFFFFF;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.swiper-pagination-bullet {
+	width: 20%;
+	border-radius: 0;
+	height: 6px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	color: #e6e6e6;
+	background: #e6e6e6;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+	width: 20%;
+	border-radius: 0;
+	height: 6px;
+	color: #a30c33;
+	background: #a30c33;
+	cursor: crosshair;
+}

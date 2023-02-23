@@ -8,22 +8,22 @@ export const Header = () => {
 
 	return (
 		<header id='header' className={cx('header')}>
-			<a href='#header'>
+			<a href='#'>
 				<Logo />
 			</a>
 			<nav className={cx('header__nav', 'nav')}>
 				<ul className={cx('nav__links', 'links')}>
 					<li className={cx('links__item')}>
-						<a href='#cloud'>Облачные решения</a>
+						<a href='#'>Облачные решения</a>
 					</li>
 					<li className={cx('links__item')}>
-						<a href='#cyber'>Кибербезопасность</a>
+						<a href='#'>Кибербезопасность</a>
 					</li>
 					<li className={cx('links__item')}>
-						<a href='#import'>Импортозамещение</a>
+						<a href='#'>Импортозамещение</a>
 					</li>
 					<li className={cx('links__item')}>
-						<a href='#transform'>Цифровая трансформация</a>
+						<a href='#'>Цифровая трансформация</a>
 					</li>
 				</ul>
 			</nav>

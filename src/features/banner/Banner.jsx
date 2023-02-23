@@ -26,7 +26,13 @@ export const Banner = () => {
 					Поставщик услуг цифровой трансформации <br /> и
 					кибербезопасности
 				</h1>
-				<button className={cx('banner__button')}>На сайт</button>
+				<a
+					href='https://softline.ru'
+					target={'_blank'}
+					className={cx('banner__button')}
+				>
+					На сайт
+				</a>
 			</div>
 		</div>
 	);
