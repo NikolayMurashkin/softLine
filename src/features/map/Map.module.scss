@@ -1,12 +1,41 @@
 .map {
 	margin-bottom: 100px;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	@media (max-width: 700px) {
+			margin-bottom: -50px;
+		}
+	@media (max-width: 600px) {
+			margin-bottom: -100px;
+		}
+	@media (max-width: 400px) {
+			margin-bottom: -200px;
+		}
+
 	&__header {
 		padding: 28px 70px;
 		background: #ffffff;
 		box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
 		display: flex;
 		justify-content: space-between;
+		overflow-x: auto;
+		z-index: 5;
+
+		@media (max-width: 1100px) {
+			padding: 18px 30px;
+			column-gap: 20px;
+		}
+		@media (max-width: 700px) {
+			padding: 18px 5px;
+			column-gap: 20px;
+		}
+		@media (max-width: 500px) {
+			padding: 18px 5px;
+			column-gap: 20px;
+			flex-direction: column;
+			row-gap: 20px;
+		}
 	}
 	&__dropdown {
 		font-size: 24px;
@@ -16,12 +45,19 @@
 		column-gap: 12px;
 		align-items: center;
 		cursor: pointer;
+		@media (max-width: 1100px) {
+			font-size: 20px;
+			flex: 1 0 auto;
+		}
 	}
 	&__links {
 		list-style: none;
 		display: flex;
 		column-gap: 30px;
 		transition: all 0.3s ease;
+		@media (max-width: 1100px) {
+			column-gap: 15px;
+		}
 		&_blur {
 			opacity: 0.1;
 		}
@@ -32,6 +68,11 @@
 		color: #444444;
 		cursor: pointer;
 		transition: color 0.3s ease;
+		white-space: nowrap;
+		@media (max-width: 700px) {
+			font-size: 14px;
+			line-height: 16px;
+		}
 		&:hover {
 			color: #a30c33;
 		}
@@ -47,6 +88,9 @@
 				width: 100%;
 				display: block;
 				background: #a30c33;
+				@media (max-width: 1100px) {
+					bottom: -18px;
+				}
 			}
 		}
 	}
@@ -54,6 +98,31 @@
 		padding: 90px 30px 0;
 		overflow-x: auto;
 		position: relative;
+		transition: all 0.3s ease;
+		&_blur {
+			opacity: 0.1;
+		}
+		@media (max-width: 700px) {
+			top: -100px;
+			left: -40px;
+			width: 743px;
+			align-self: stretch;
+			transform: scale(0.9);
+		}
+		@media (max-width: 600px) {
+			left: -80px;
+			transform: scale(0.8);
+		}
+		@media (max-width: 480px) {
+			left: -80px;
+			width: 620px;
+		}
+		@media (max-width: 400px) {
+			top: -160px;
+			left: -100px;
+			width: 550px;
+			transform: scale(0.7);
+		}
 	}
 	&__cities {
 		position: absolute;
@@ -72,9 +141,10 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		// width: 500px;
 		row-gap: 2px;
 		position: absolute;
+		line-height: 100%;
+		font-size: 12px;
 		&_dot {
 			display: inline-block;
 			width: 8px;
@@ -85,32 +155,35 @@
 		&_msk {
 			top: 314px;
 			left: 154px;
+			font-size: 14px;
 		}
 		&_yaroslavl {
 			top: 290px;
-			left: 182px;
+			left: 186px;
 		}
 		&_voronezh {
 			top: 335px;
-			left: 100px;
+			left: 104px;
 		}
 		&_belgorod {
 			top: 370px;
-			left: 97px;
+			left: 102px;
 		}
 		&_spb {
 			top: 221px;
 			left: 127px;
 			width: 109px;
+			font-size: 16px;
 		}
 		&_kaliningrad {
 			top: 214px;
-			left: 40px;
+			left: 47px;
 		}
 		&_rostov {
 			top: 410px;
 			left: 70px;
 			width: 88px;
+			font-size: 14px;
 		}
 		&_volgograd {
 			top: 450px;
@@ -119,6 +192,7 @@
 		&_krasnodar {
 			top: 468px;
 			left: 55px;
+			font-size: 14px;
 		}
 		&_novgorod {
 			top: 350px;
@@ -148,6 +222,7 @@
 		&_perm {
 			top: 390px;
 			left: 395px;
+			font-size: 14px;
 		}
 		&_surgut {
 			top: 400px;
@@ -160,14 +235,17 @@
 		&_chelyabinsk {
 			top: 455px;
 			left: 320px;
+			font-size: 14px;
 		}
 		&_tyumen {
 			top: 450px;
 			left: 425px;
+			font-size: 14px;
 		}
 		&_omsk {
 			top: 565px;
 			left: 480px;
+			font-size: 14px;
 		}
 		&_nsk {
 			top: 545px;
@@ -176,6 +254,7 @@
 		&_tomsk {
 			top: 532px;
 			left: 600px;
+			font-size: 14px;
 		}
 		&_krasnoyarsk {
 			top: 545px;
@@ -184,14 +263,17 @@
 		&_irkutsk {
 			top: 580px;
 			left: 700px;
+			font-size: 14px;
 		}
 		&_habarovsk {
 			top: 575px;
 			left: 985px;
+			font-size: 16px;
 		}
 		&_vladivostok {
 			top: 662px;
 			left: 968px;
+			font-size: 16px;
 		}
 	}
 }
@@ -210,13 +292,34 @@
 	transition: all 0.3s ease-in-out;
 	visibility: visible;
 	opacity: 1;
-	height: 272px;
+	min-height: 200px;
 	width: 1250px;
+	@media (max-width: 1100px) {
+		top: 56px;
+		margin-top: 0px;
+		padding: 20px 10px;
+		width: 100%;
+		min-height: 20px;
+		flex-wrap: wrap;
+		column-gap: 10px;
+		row-gap: 15px;
+	}
 	&__column {
 		display: flex;
 		flex: 1 1 auto;
 		flex-direction: column;
 		row-gap: 12px;
+		transition: all 0.3s ease;
+		@media (max-width: 1100px) {
+			max-height: 20px;
+			overflow: hidden;
+		}
+		&_opened {
+			@media (max-width: 1100px) {
+				max-height: 200px;
+				overflow: visible;
+			}
+		}
 	}
 	&__item {
 		font-family: "Proxima Nova regular";
@@ -224,14 +327,32 @@
 		line-height: 20px;
 		color: #444444;
 		font-weight: 400;
+		display: flex;
+		align-items: center;
+		column-gap: 3px;
 		&:first-child {
 			font-weight: 600;
+		}
+		@media (max-width: 1100px) {
+			font-size: 14px;
+			line-height: 14px;
+			&:first-child {
+				cursor: pointer;
+				&::after {
+					content: "";
+					display: inline-block;
+					position: relative;
+					top: -2px;
+					width: 8px;
+					height: 8px;
+					background: url("../../assets/icons/cityListArrow.svg");
+				}
+			}
 		}
 	}
 }
 .hidden {
 	transition: all 0.3s ease-in-out;
-	// display: none;
 	visibility: hidden;
 	opacity: 0;
 	height: 0;

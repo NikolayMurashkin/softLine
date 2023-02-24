@@ -6,15 +6,25 @@
 		text-align: center;
 		color: #444444;
 		margin-bottom: 55px;
+		@media (max-width: 700px) {
+			font-size: 28px;
+			margin-bottom: 15px;
+		}
 	}
 	&__content {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: 20px;
 		row-gap: 20px;
+		@media (max-width: 900px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 560px) {
+			grid-template-columns: repeat(1, 1fr);
+			row-gap: 10px;
+		}
 	}
-}
-
-.content {
+	@media (max-width: 700px) {
+		margin-bottom: 50px;
+	}
 }

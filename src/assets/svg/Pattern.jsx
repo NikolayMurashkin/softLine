@@ -1,6 +1,7 @@
 import * as React from 'react';
+import styles from './Pattern.module.scss'
 
-const SvgComponent = ({ right }) => (
+export const Pattern = ({ right }) => (
 	<svg
 		width={301}
 		height={377}
@@ -11,6 +12,7 @@ const SvgComponent = ({ right }) => (
 				? { transform: 'rotate(180deg)' }
 				: { transform: 'rotate(0deg)' }
 		}
+		className={styles.pattern}
 	>
 		<g opacity={0.4}>
 			<path
@@ -45,5 +47,3 @@ const SvgComponent = ({ right }) => (
 		</g>
 	</svg>
 );
-
-export default SvgComponent;

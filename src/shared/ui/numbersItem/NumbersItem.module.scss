@@ -8,13 +8,23 @@
 		line-height: 80%;
 		color: #a30c33;
 		opacity: 0.95;
+		@media (max-width: 1000px) {
+			font-size: 60px;
+		}
+		@media (max-width: 700px) {
+			font-size: 40px;
+		}
 	}
 
 	.label {
+		font-family: "Proxima Nova regular";
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 150%;
 		color: #444444;
 		white-space: pre-wrap;
+		@media (max-width: 700px) {
+			font-size: 16px;
+		}
 	}
 }

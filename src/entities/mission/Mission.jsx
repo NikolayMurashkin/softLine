@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './Mission.module.scss';
-import Pattern from '../../assets/svg/Pattern';
+import { Pattern } from '../../assets/svg/Pattern';
 
 export const Mission = () => {
 	const cx = classNames.bind(styles);

@@ -31,7 +31,7 @@ export const Numbers = () => {
 			<NumbersItem
 				className={cx('numbers__item')}
 				number={'3000 +'}
-				label={`сотрудников ежегодно \n проходят оценку и обучение`}
+				label={`сотрудников ежегодно \nпроходят оценку и обучение`}
 			/>
 		</section>
 	);

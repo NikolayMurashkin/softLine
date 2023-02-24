@@ -3,10 +3,32 @@
 	background: #ffffff;
 	box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
 	padding: 99px 110px;
+	@media (max-width: 1000px) {
+		margin: 60px 30px;
+		padding: 50px 60px;
+	}
+	@media (max-width: 700px) {
+		margin: 60px 0px;
+		padding: 20px 30px;
+	}
+	@media (max-width: 480px) {
+		margin: 60px 0px 50px;
+		padding: 24px 5px;
+	}
 	&__text {
 		font-size: 32px;
 		line-height: 120%;
 		text-align: center;
+		color: #444444;
+		@media (max-width: 1000px) {
+			font-size: 28px;
+		}
+		@media (max-width: 700px) {
+			font-size: 22px;
+		}
+		@media (max-width: 480px) {
+			font-size: 18px;
+		}
 		strong {
 			color: #b01736;
 		}

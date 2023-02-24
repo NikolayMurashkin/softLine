@@ -11,10 +11,24 @@ export const Map = () => {
 	const [currentTab, setCurrentTab] = useState('all');
 	const citylistRef = useRef(null);
 	const linksRef = useRef(null);
+	const mapContentRef = useRef(null);
+	const moscowRef = useRef(null);
+	const centerRef = useRef(null);
+	const nwRef = useRef(null);
+	const uralRef = useRef(null);
+	const siberiaRef = useRef(null);
+	const farEastRef = useRef(null);
+	const southRef = useRef(null);
+	const volgaRef = useRef(null);
 
 	const handleCitylistVisibility = () => {
 		citylistRef.current.classList.toggle(cx('hidden'));
 		linksRef.current.classList.toggle(cx('map__links_blur'));
+		mapContentRef.current.classList.toggle(cx('map__links_blur'));
+	};
+
+	const handleListOpen = (ref) => {
+		ref.current.classList.toggle(cx('city-list__column_opened'));
 	};
 
 	const handleTabChange = (tab) => {
@@ -71,7 +85,7 @@ export const Map = () => {
 							map__link_active: currentTab === 'nw',
 						})}
 					>
-						Северо-Запад
+						Северо&#8209;Запад
 					</li>
 					<li
 						onClick={(e) => handleTabChange(e.target.dataset.tab)}
@@ -120,7 +134,7 @@ export const Map = () => {
 					</li>
 				</ul>
 			</div>
-			<div className={cx('map__content')}>
+			<div ref={mapContentRef} className={cx('map__content')}>
 				<MapSvg region={currentTab} />
 				<div className={cx('map__cities', 'cities')}>
 					{currentTab === 'all' && (
@@ -644,32 +658,57 @@ export const Map = () => {
 				ref={citylistRef}
 				className={cx('map__city-list', 'city-list', 'hidden')}
 			>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Москва</span>
+				<div className={cx('city-list__column')} ref={moscowRef}>
+					<span
+						onClick={() => handleListOpen(moscowRef)}
+						className={cx('city-list__item')}
+					>
+						Москва
+					</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Центр</span>
+				<div className={cx('city-list__column')} ref={centerRef}>
+					<span
+						onClick={() => handleListOpen(centerRef)}
+						className={cx('city-list__item')}
+					>
+						Центр
+					</span>
 					<span className={cx('city-list__item')}>Воронеж</span>
 					<span className={cx('city-list__item')}>Ярославль</span>
 					<span className={cx('city-list__item')}>Белгород</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Северо-Запад</span>
+				<div className={cx('city-list__column')} ref={nwRef}>
+					<span
+						onClick={() => handleListOpen(nwRef)}
+						className={cx('city-list__item')}
+					>
+						Северо&#8209;Запад
+					</span>
 					<span className={cx('city-list__item')}>
-						Санкт-Петербург
+						Санкт&#8209;Петербург
 					</span>
 					<span className={cx('city-list__item')}>Калиниград</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Юг</span>
+				<div className={cx('city-list__column')} ref={southRef}>
+					<span
+						onClick={() => handleListOpen(southRef)}
+						className={cx('city-list__item')}
+					>
+						Юг
+					</span>
 					<span className={cx('city-list__item')}>
-						Ростов-на-Дону
+						Ростов&#8209;на&#8209;Дону
 					</span>
 					<span className={cx('city-list__item')}>Краснодар</span>
 					<span className={cx('city-list__item')}>Волгоград</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Волга</span>
+				<div className={cx('city-list__column')} ref={volgaRef}>
+					<span
+						onClick={() => handleListOpen(volgaRef)}
+						className={cx('city-list__item')}
+					>
+						Волга
+					</span>
 					<span className={cx('city-list__item')}>Казань</span>
 					<span className={cx('city-list__item')}>Самара</span>
 					<span className={cx('city-list__item')}>Уфа</span>
@@ -678,8 +717,13 @@ export const Map = () => {
 						Нижний Новгород
 					</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Урал</span>
+				<div className={cx('city-list__column')} ref={uralRef}>
+					<span
+						onClick={() => handleListOpen(uralRef)}
+						className={cx('city-list__item')}
+					>
+						Урал
+					</span>
 					<span className={cx('city-list__item')}>Екатеринбург</span>
 					<span className={cx('city-list__item')}>Челябинск</span>
 					<span className={cx('city-list__item')}>Пермь</span>
@@ -687,16 +731,24 @@ export const Map = () => {
 					<span className={cx('city-list__item')}>Тюмень</span>
 					<span className={cx('city-list__item')}>Ижевск</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>Сибирь</span>
+				<div className={cx('city-list__column')} ref={siberiaRef}>
+					<span
+						onClick={() => handleListOpen(siberiaRef)}
+						className={cx('city-list__item')}
+					>
+						Сибирь
+					</span>
 					<span className={cx('city-list__item')}>Омск</span>
 					<span className={cx('city-list__item')}>Томск</span>
 					<span className={cx('city-list__item')}>Красноярск</span>
 					<span className={cx('city-list__item')}>Иркутск</span>
 					<span className={cx('city-list__item')}>Новосибирск</span>
 				</div>
-				<div className={cx('city-list__column')}>
-					<span className={cx('city-list__item')}>
+				<div className={cx('city-list__column')} ref={farEastRef}>
+					<span
+						onClick={() => handleListOpen(farEastRef)}
+						className={cx('city-list__item')}
+					>
 						Дальний Восток
 					</span>
 					<span className={cx('city-list__item')}>Хабаровск</span>

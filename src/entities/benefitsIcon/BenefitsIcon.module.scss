@@ -13,4 +13,7 @@
 		color: #444444;
 		white-space: pre-wrap;
 	}
+	@media (max-width: 560px) {
+		flex: 0 1 120px;
+	}
 }

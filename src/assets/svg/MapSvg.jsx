@@ -4,6 +4,7 @@ import styles from './MapSvg.module.scss';
 
 export const MapSvg = ({ region }) => (
 	<svg
+	className={styles.map}
 		width={1190}
 		height={601}
 		fill='none'

@@ -4,21 +4,48 @@
 	justify-content: flex-end;
 	height: 260px;
 	overflow: hidden;
+	transition: all 0.3s ease-in-out;
 	&:hover &__body {
 		height: 100%;
 	}
 	&:hover &__text {
 		visibility: visible;
 	}
+	// @media (max-width: 560px) {
+	// 	height: 60px;
+	// 	&:hover {
+	// 		height: 100%;
+	// 	}
+	// 	&:hover &__text {
+	// 		visibility: visible;
+	// 	}
+	// }
+	&_small {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: auto;
+		transition: all 0.3s ease-in-out;
+	}
 	&__body {
 		padding: 28px 20px;
-		background: #2d3653;
-		opacity: 0.6;
+		background: rgba(45, 54, 83, 0.8);
 		height: 80px;
 		transition: height 0.3s ease;
-		// &:hover {
-		// 	height: 100%;
-		// }
+		@media (max-width: 1000px) {
+			padding: 10px;
+			height: 60px;
+		}
+		&_small {
+			padding: 8px 10px;
+			max-height: 100%;
+			background: rgba(45, 54, 83, 0.8);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			row-gap: 10px;
+			transition: all 0.3s ease-in-out;
+		}
 	}
 	&__title {
 		margin-bottom: 20px;
@@ -26,13 +53,26 @@
 		line-height: 100%;
 		color: #ffffff;
 		white-space: pre-wrap;
+		@media (max-width: 1000px) {
+			font-size: 20px;
+		}
+		&_small {
+			color: #ffffff;
+		}
 	}
 	&__text {
+		font-family: "Proxima Nova regular";
 		font-weight: 400;
 		font-size: 17px;
 		line-height: 140%;
 		color: #ffffff;
 		visibility: hidden;
 		transition: visibility 0.3s ease;
+		@media (max-width: 1000px) {
+			font-size: 16px;
+		}
+		&_small {
+			color: #ffffff;
+		}
 	}
 }

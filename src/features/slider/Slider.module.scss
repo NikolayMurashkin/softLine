@@ -4,21 +4,53 @@
 	max-width: 1110px;
 	align-self: center;
 	margin-bottom: 56px;
+	@media (max-width: 1130px) {
+		max-width: 700px;
+	}
+	@media (max-width: 700px) {
+		max-width: 470px;
+	}
+	@media (max-width: 480px) {
+		max-width: 290px;
+		margin-bottom: 50px;
+	}
 	&__header {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 37px;
+		@media (max-width: 700px) {
+			margin-bottom: 15px;
+		}
 	}
 	&__title {
 		font-size: 56px;
 		line-height: 100%;
 		color: #444444;
+		@media (max-width: 1130px) {
+			font-size: 36px;
+		}
+		@media (max-width: 700px) {
+			font-size: 28px;
+			text-align: center;
+			width: 100%;
+		}
 	}
 	&__swiper {
 		max-width: 1100px;
 		max-height: 834px;
 		align-self: center;
 		margin-bottom: 40px;
+		@media (max-width: 1130px) {
+			max-width: 700px;
+		}
+		@media (max-width: 700px) {
+			max-width: 470px;
+			margin-bottom: 20px;
+		}
+		@media (max-width: 480px) {
+			max-width: 290px;
+			margin-bottom: 0;
+		}
 	}
 	&__controls {
 		display: flex;
