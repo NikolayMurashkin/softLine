@@ -3,16 +3,19 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
-	max-width: inherit;
+	position: sticky;
+	// width: calc(100vw - 30px);
 	width: 100%;
 	padding: 30px 70px;
-	left: 50%;
-	top: 0%;
-	transform: translateX(-50%);
+	left: 0;
+	top: 0;
+	// transform: translateX(-50%);
 	background: rgba(255, 255, 255, 0.55);
 	backdrop-filter: blur(10px);
 	line-height: 0;
+	@media (max-width: 1249px) {
+		width: calc(100vw - 30px);
+	}
 	svg {
 		flex: 1 0 auto;
 	}

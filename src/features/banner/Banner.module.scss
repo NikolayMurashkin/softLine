@@ -1,17 +1,11 @@
 .banner {
-	margin-top: 85px;
-	position: relative;
-	top: 0;
-	left: 0;
 	height: 600px;
 	display: flex;
-	align-items: center;
-	&__img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-	}
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	row-gap: 60px;
+	background-image: url("/images/bg-1250x600.jpg");
 	&__cta {
 		display: flex;
 		flex-direction: column;
@@ -24,8 +18,11 @@
 		font-size: 56px;
 		line-height: 100%;
 		color: #444444;
+		white-space: pre-wrap;
+		margin-left: 70px;
 	}
 	&__button {
+		margin-left: 70px;
 		padding: 18px 28px;
 		background: #b01736;
 		border-radius: 8px;

@@ -13,7 +13,7 @@ export const Map = () => {
 	const linksRef = useRef(null);
 
 	const handleCitylistVisibility = () => {
-		city - listRef.current.classList.toggle(cx('hidden'));
+		citylistRef.current.classList.toggle(cx('hidden'));
 		linksRef.current.classList.toggle(cx('map__links_blur'));
 	};
 
@@ -123,6 +123,253 @@ export const Map = () => {
 			<div className={cx('map__content')}>
 				<MapSvg region={currentTab} />
 				<div className={cx('map__cities', 'cities')}>
+					{currentTab === 'all' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_yaroslavl'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Ярославль
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_voronezh'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Воронеж
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_belgorod'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Белгород
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_msk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Москва
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_spb'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Санкт-Петербург
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_kaliningrad'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Калиниград
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_rostov'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Ростов-на-Дону
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_volgograd'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Волгоград
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_krasnodar'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Краснодар
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_novgorod'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Н. Новгород
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_kazan'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Казань
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_ufa'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Уфа
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_samara'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Самара
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_orenburg'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Оренбург
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_izhevsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Ижевск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_perm'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Пермь
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_surgut'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Сургут
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_ekb'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Екатеринбург
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_chelyabinsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Челябинск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_tyumen'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Тюмень
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_omsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Омск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_nsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Новосибирск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_tomsk'
+								)}
+							>
+								Томск
+								<span className={cx('cities__city_dot')}></span>
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_krasnoyarsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Красноярск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_irkutsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Иркутск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_habarovsk'
+								)}
+							>
+								Хабаровск
+								<span className={cx('cities__city_dot')}></span>
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_vladivostok'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Владивосток
+							</div>
+						</div>
+					)}
 					{currentTab === 'msk' && (
 						<div className={cx('cities__city', 'cities__city_msk')}>
 							<span className={cx('cities__city_dot')}></span>
@@ -148,6 +395,246 @@ export const Map = () => {
 							>
 								<span className={cx('cities__city_dot')}></span>
 								Воронеж
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_belgorod'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Белгород
+							</div>
+						</div>
+					)}
+					{currentTab === 'nw' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_spb'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Санкт-Петербург
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_kaliningrad'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Калиниград
+							</div>
+						</div>
+					)}
+					{currentTab === 'south' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_rostov'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Ростов-на-Дону
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_volgograd'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Волгоград
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_krasnodar'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Краснодар
+							</div>
+						</div>
+					)}
+					{currentTab === 'volga' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_novgorod'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Н. Новгород
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_kazan'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Казань
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_ufa'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Уфа
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_samara'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Самара
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_orenburg'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Оренбург
+							</div>
+						</div>
+					)}
+					{currentTab === 'ural' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_izhevsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Ижевск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_perm'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Пермь
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_surgut'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Сургут
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_ekb'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Екатеринбург
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_chelyabinsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Челябинск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_tyumen'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Тюмень
+							</div>
+						</div>
+					)}
+					{currentTab === 'siberia' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_omsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Омск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_nsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Новосибирск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_tomsk'
+								)}
+							>
+								Томск
+								<span className={cx('cities__city_dot')}></span>
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_krasnoyarsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Красноярск
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_irkutsk'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Иркутск
+							</div>
+						</div>
+					)}
+					{currentTab === 'farEast' && (
+						<div className={cx('cities__wrapper')}>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_habarovsk'
+								)}
+							>
+								Хабаровск
+								<span className={cx('cities__city_dot')}></span>
+							</div>
+							<div
+								className={cx(
+									'cities__city',
+									'cities__city_vladivostok'
+								)}
+							>
+								<span className={cx('cities__city_dot')}></span>
+								Владивосток
 							</div>
 						</div>
 					)}
@@ -206,6 +693,7 @@ export const Map = () => {
 					<span className={cx('city-list__item')}>Томск</span>
 					<span className={cx('city-list__item')}>Красноярск</span>
 					<span className={cx('city-list__item')}>Иркутск</span>
+					<span className={cx('city-list__item')}>Новосибирск</span>
 				</div>
 				<div className={cx('city-list__column')}>
 					<span className={cx('city-list__item')}>
